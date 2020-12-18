@@ -1,3 +1,8 @@
+#### Vscode
+1.vscode命令号打开命令
+```
+code .
+```
 #### 插件使用
 1. typeScript Auto Compiler : 自动转成js文件
 2. Live Serve : 在浏览器中打开，自动带热更新
