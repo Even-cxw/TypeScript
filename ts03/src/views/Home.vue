@@ -1,6 +1,7 @@
 <template>
   <div>
-    <UIButton1 large @click="clickButton1">我是button1</UIButton1>
+    <UIButton1 large @click="clickButton1"
+    color="#2D8CF0">我是button1</UIButton1>
     <UIButton2 large :age="age" :name='name' 
     @click="clickButton2">我是button2</UIButton2>
   </div>
