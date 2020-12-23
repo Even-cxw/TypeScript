@@ -1,8 +1,9 @@
-<!-- button封装正常写法 -->
+<!-- button2封装正常写法 -->
 <template>
   <div class='button-wrap'>
     <div class="button-inner" 
     :class="{'smart':smart,'large':large}"
+    v-on="$listeners"
     >
       <slot></slot>
     </div>
@@ -20,6 +21,10 @@ export default {
     large: {
       type: Boolean,
       default: false,
+    },
+    age: {
+      type: Number,
+      default: 28,
     }
   },
   components: {},
@@ -30,11 +35,16 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    clickButton() {
+      console.log('点解了button2')
+    }
   },
   created() {
   },
   mounted() {
-    console.log('button2-smart',this.smart);
+    // 接收组件传递过来的参数(除props之外的)
+    console.log('this.$attrs',this.$attrs);
+    console.log('this.$listeners',this.$listeners);
   },
   beforeCreate() {}, //生命周期 - 创建之前
   beforeMount() {}, //生命周期 - 挂载之前

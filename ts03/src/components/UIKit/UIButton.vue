@@ -2,6 +2,7 @@
   <div class='button-wrap'>
     <div class="button-inner" 
     :class="{'smart':smart,'large':large}"
+    @click="clickButton1"
     >
       <slot></slot>
     </div>
@@ -9,18 +10,30 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Emit,Prop } from 'vue-property-decorator';
 
 @Component
 export default class UIButton extends Vue{
-
+  // 接收父组件参数
+  @Prop(Boolean) private large:boolean | undefined
+  @Prop(Boolean) private smart:boolean | undefined
+  // data里面的状态
+  private name: string = "even"
+  // 每次调用emitClickEvent 都会发送click事件
+  @Emit('click') private emitClickEvent(event: MouseEvent){}
+  private clickButton1(event: MouseEvent) {
+    this.emitClickEvent(event);
+  }
 }
 </script>
 
-
 <style lang='stylus' scoped>
-.button-wrap {
+// stylus混合函数
+resize(padding) {
+  padding: padding;
+}
 
+.button-wrap {
   .button-inner {
     box-sizing: boder-box;
     display inline-block
@@ -31,10 +44,10 @@ export default class UIButton extends Vue{
     border:1px solid #6e6e6e;
   }
   .smart {
-    padding: 5px;
+    resize(5px)
   }
   .large {
-    padding: 10px;
+    resize(10px)
   }
 }
 </style>
