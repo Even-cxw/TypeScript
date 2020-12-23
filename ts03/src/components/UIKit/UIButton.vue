@@ -60,7 +60,7 @@ resize(padding) {
       filter brightness(120%)
     }
     &:active {
-      filter brightness(80%)
+      filter brightness(50%)
     }
   }
   .smart {
