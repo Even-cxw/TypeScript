@@ -19,3 +19,4 @@
   - home.vue 装饰器的作用;
   - public/reset/reset.css引入
   - element 安装  npm i element-ui -S:运行依赖  -D:开发依赖
+  - 引入font-anesome图标库
