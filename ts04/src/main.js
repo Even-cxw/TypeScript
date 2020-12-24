@@ -3,6 +3,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 require('./assets/css/reset.css');
+// element-ui的用法
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+vue.use(ElementUI);
 Vue.config.productionTip = false;
 new Vue({
     router,
