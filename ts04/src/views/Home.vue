@@ -1,6 +1,12 @@
 <template>
   <div class="home">
     我是home页面
+    <i class="fa fa-camera-retro fa-lg"></i>
+    <i class="fa fa-asterisk" aria-hidden="true"></i>
+    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    <br>
+    <i class="el-icon-edit"></i> el
+    <i class="el-icon-delete"></i>
   </div>
 </template>
 
