@@ -8,9 +8,13 @@
 1. typeScript Auto Compiler : 自动转成js文件
 2. Live Serve : 在浏览器中打开，自动热更新
 #### ts项目目录
-1. ts01 基础类型  
+1. ts01 基础类型
 2. ts02 interface接口  generic泛型
 3. ts03 vue/cli
   - home.vue ts组件的注册
   - button js组件： 应用 $listeners $attr
   - button ts组件：stylus混合的应用、reset混合函数、变量、滤镜
+4. ts04 简单的后台管理系统
+  - div.home 创建div标签 class类为home
+  - home.vue 装饰器的作用;
+  - public/reset/reset.css引入

@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    我是home页面
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script lang="ts">
+// 装饰器的作用：对现有的函数或者类做扩展和补充；
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+@Component({
+  components: {}
+})
+export default class Home extends Vue{
+
 }
 </script>
+
+
+<style lang="stylus" scope>
+
+</style>
