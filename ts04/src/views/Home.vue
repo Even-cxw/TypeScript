@@ -1,11 +1,12 @@
 <template>
   <div class="home">
     我是home页面
-    <i class="fa fa-camera-retro fa-lg"></i>
-    <i class="fa fa-asterisk" aria-hidden="true"></i>
-    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    <i class="fa fa-camera-retro fa-lg fa-spin"></i>
+    <i class="fa fa-asterisk fa-spin" aria-hidden="true"></i>
+    <i class="fa fa-envelope-o fa-spin" aria-hidden="true"></i>
     <br>
-    <i class="el-icon-edit"></i> el
+    <i class="el-icon-edit"></i>
     <i class="el-icon-delete"></i>
   </div>
 </template>
