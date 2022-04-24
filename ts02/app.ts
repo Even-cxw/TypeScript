@@ -49,6 +49,9 @@ const a1:person3interface3 = {
 function a2<T>(age:T):T {
   return age;
 }
+// 也可以这样写
+const a7 = <T>(age:T)=>age
+
 console.log(a2(true));
 //在接口中使用泛型1
 interface b2 {
