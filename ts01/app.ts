@@ -71,7 +71,7 @@ let myNull01: null = null;
 
 // never 是任何类型的子类型，
 let x:never;
-// x = 123 不能讲其他类型转成never类型
+// x = 123 不能将其他类型转成never类型
 // never的应用，抛出异常
 function loop(message:string):never {
   throw new Error(message);
