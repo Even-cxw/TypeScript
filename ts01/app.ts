@@ -73,6 +73,7 @@ let myNull01: null = null;
 let x:never;
 // x = 123 不能将其他类型转成never类型
 // never的应用，抛出异常
+
 function loop(message:string):never {
   throw new Error(message);
 }
@@ -145,3 +146,4 @@ console.log(MyMath01.sumValue(12,12));
 import * as sumValueModule from './stuff/sumValue'
 let a1 = sumValueModule.sumValue02(12,100);
 console.info(a1);
+
