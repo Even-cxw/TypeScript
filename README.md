@@ -20,6 +20,12 @@
   > 3. public/reset/reset.css引入
   > 4. element 安装  npm i element-ui -S:运行依赖  -D:开发依赖
   > 5. 引入[font-awesome图标库](http://www.fontawesome.com.cn/) 比 element-ui图标库更灵活 
++  ts06
+  > 1. 泛型函数
+  > 2. 泛型对象
+  > 3. antd中常用接口类型
+
+
 
 #### js项目目录
 + js01 element-UI实践
