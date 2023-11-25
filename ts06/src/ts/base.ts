@@ -4,7 +4,7 @@
  */
 
 // 泛型函数
-interface Ifun<T> = (val: T) => void;
+type Ifun<T> = (val: T) => void;
 
 let fun1:Ifun<string> = (val:string) => {
   console.log('val', val)

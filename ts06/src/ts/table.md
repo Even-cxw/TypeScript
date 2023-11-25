@@ -21,27 +21,6 @@ let columns:ColumnsType<IList> = useMemo(() => {
 - table中`columns`- `ColumnProps`接口
 
 ```ts
-import { Table, ColumnProps } from 'antd';
-
-ChatGPT
-Error analyzing
-Error analyzing
-It seems that there is a technical issue preventing me from directly reading the contents of your TypeScript file. However, I can still provide guidance on how to use ColumnProps in a TypeScript file with Ant Design's Table component, based on standard practices.
-
-When using ColumnProps in a TypeScript file with Ant Design, the general approach is as follows:
-
-Define the Data Structure: If you haven't already, define the data structure for the rows in your table. This is typically done using TypeScript interfaces or types.
-
-Create Columns Definition: Define your columns using the ColumnProps type. You'll create an array of objects, each representing a column in your table.
-
-Configure Each Column: For each column, you'll specify various properties such as title, dataIndex, key, and any other properties relevant to your table's functionality (like sorter, filters, etc.).
-
-Use the Columns in the Table Component: Finally, you pass your columns array to the Table component's columns prop.
-
-Here's an example to illustrate this:
-
-typescript
-Copy code
 import React from 'react';
 import { Table, ColumnProps } from 'antd';
 
@@ -75,7 +54,6 @@ const columns: ColumnProps<RowData>[] = [
 ```
 
 - table中 `pagination` - `TablePaginationConfig`接口
-
 ```ts
 import { TablePaginationConfig } from 'antd/es/table';
 const handleTableChange = (pagination:TablePaginationConfig, filters, sorter) => {
@@ -83,4 +61,22 @@ const handleTableChange = (pagination:TablePaginationConfig, filters, sorter) =>
   setQueryParams({})
   apiFetch({limit:pageSize, page: current})
 };
+```
+
+- `useRef` 一般在组件中使用
+
+```ts
+// 定义接口
+type ILogmodalRef = {
+  changeOpen: (newVal:boolean, record:ICollectionList) => void;
+}
+// 定义变量
+const logModalRef = useRef<ILogmodalRef>(null);
+//定义方法
+const lookLog = useCallback((record: ICollectionList) => {
+  logModalRef.current?.changeOpen(true, {opraType: 'look',...record});
+}, [])
+// 在组件中使用
+// <LogModal ref={logModalRef}/>
+
 ```
